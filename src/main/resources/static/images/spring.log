@@ -1,0 +1,68 @@
+2021-11-01 23:52:14.491  INFO 16028 --- [restartedMain] com.nguyenduc.ProductApplication         : Starting ProductApplication using Java 1.8.0_201 on NguyenHuynhDuc with PID 16028 (D:\Codegym\Module-4\baitap\Spring-Boot\product-application\build\classes\java\main started by nguye in D:\Codegym\Module-4\baitap\Spring-Boot\product-application)
+2021-11-01 23:52:14.493  INFO 16028 --- [restartedMain] com.nguyenduc.ProductApplication         : No active profile set, falling back to default profiles: default
+2021-11-01 23:52:14.650  INFO 16028 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-11-01 23:52:14.650  INFO 16028 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-11-01 23:52:16.770  INFO 16028 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-01 23:52:17.053  INFO 16028 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 236 ms. Found 3 JPA repository interfaces.
+2021-11-01 23:52:18.162  INFO 16028 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-11-01 23:52:18.178  INFO 16028 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-01 23:52:18.179  INFO 16028 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+2021-11-01 23:52:18.342  INFO 16028 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-01 23:52:18.343  INFO 16028 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3691 ms
+2021-11-01 23:52:18.622  INFO 16028 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-01 23:52:19.445  INFO 16028 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-01 23:52:19.519  INFO 16028 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-01 23:52:19.619  INFO 16028 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-11-01 23:52:19.905  INFO 16028 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-11-01 23:52:20.104  INFO 16028 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-11-01 23:52:21.770 DEBUG 16028 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    alter table image 
+       add constraint FKgpextbyee3uk9u6o2381m7ft1 
+       foreign key (product_id) 
+       references product (id)
+2021-11-01 23:52:21.900 DEBUG 16028 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    alter table product 
+       add constraint FK1mtsbur82frn64de7balymq9s 
+       foreign key (category_id) 
+       references category (id)
+2021-11-01 23:52:21.997  INFO 16028 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-01 23:52:22.020  INFO 16028 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-01 23:52:22.916  WARN 16028 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-01 23:52:23.558  INFO 16028 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-11-01 23:52:23.639  INFO 16028 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-11-01 23:52:23.666  INFO 16028 --- [restartedMain] com.nguyenduc.ProductApplication         : Started ProductApplication in 10.19 seconds (JVM running for 11.785)
+2021-11-01 23:52:27.862  INFO 16028 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-01 23:52:27.862  INFO 16028 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-11-01 23:52:27.866  INFO 16028 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2021-11-01 23:52:28.078 DEBUG 16028 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        product
+        (category_id, created_date, description, name, price) 
+    values
+        (?, ?, ?, ?, ?)
+2021-11-01 23:52:28.088 TRACE 16028 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [null]
+2021-11-01 23:52:28.089 TRACE 16028 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [TIMESTAMP] - [Mon Nov 01 23:52:28 ICT 2021]
+2021-11-01 23:52:28.092 TRACE 16028 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [New]
+2021-11-01 23:52:28.093 TRACE 16028 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [Iphone 11]
+2021-11-01 23:52:28.094 TRACE 16028 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [DOUBLE] - [1.5E7]
+2021-11-01 23:52:28.138 DEBUG 16028 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        image
+        (name, product_id) 
+    values
+        (?, ?)
+2021-11-01 23:52:28.139 TRACE 16028 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [samsung.jpg]
+2021-11-01 23:52:28.139 TRACE 16028 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [12]
+2021-11-01 23:52:28.151 DEBUG 16028 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        image
+        (name, product_id) 
+    values
+        (?, ?)
+2021-11-01 23:52:28.151 TRACE 16028 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [co.png]
+2021-11-01 23:52:28.151 TRACE 16028 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [12]
