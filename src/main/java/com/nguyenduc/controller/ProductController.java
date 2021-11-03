@@ -20,6 +20,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @CrossOrigin("*")
@@ -65,12 +66,42 @@ public class ProductController {
         productService.save(product);
         for (MultipartFile multipartFile : multipartFiles) {
             String fileName = multipartFile.getOriginalFilename();
-            FileCopyUtils.copy(fileName.getBytes(), new File(fileUpload + fileName));
+            FileCopyUtils.copy(multipartFile.getBytes(), new File(fileUpload + product.getId() + new Date().getTime() + fileName));
             Image image = new Image();
             image.setName(fileName);
             image.setProduct(product);
             iImageService.save(image);
         }
         return new ResponseEntity<>(HttpStatus.CREATED);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> deleteProduct(@PathVariable Long id) {
+        productService.delete(id);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Product> updateProduct(@PathVariable Long id,ProductRequest productRequest) throws IOException {
+        Product product = productService.findById(id).get();
+        if (product.getId() == null) {
+            product.setId(id);
+        }
+        product.setName(productRequest.getName());
+        product.setPrice(productRequest.getPrice());
+        product.setDescription(productRequest.getDescription());
+        product.setCategory(productRequest.getCategory());
+        List<MultipartFile> multipartFiles = productRequest.getMultipartFiles();
+        for (MultipartFile multipartFile : multipartFiles) {
+            String fileName = multipartFile.getOriginalFilename();
+            FileCopyUtils.copy(multipartFile.getBytes(), new File(fileUpload + product.getId() + new Date().getTime() + fileName));
+            Image image = new Image();
+            image.setName(fileName);
+            image.setProduct(product);
+            iImageService.save(image);
+        }
+        productService.save(product);
+        return new ResponseEntity<>(HttpStatus.CREATED);
+
     }
 }

@@ -2,6 +2,7 @@ package com.nguyenduc.service.category;
 
 
 import com.nguyenduc.model.category.Category;
+import com.nguyenduc.model.product.Product;
 import com.nguyenduc.repository.ICategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

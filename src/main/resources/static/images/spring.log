@@ -1,68 +1,692 @@
-2021-11-01 23:52:14.491  INFO 16028 --- [restartedMain] com.nguyenduc.ProductApplication         : Starting ProductApplication using Java 1.8.0_201 on NguyenHuynhDuc with PID 16028 (D:\Codegym\Module-4\baitap\Spring-Boot\product-application\build\classes\java\main started by nguye in D:\Codegym\Module-4\baitap\Spring-Boot\product-application)
-2021-11-01 23:52:14.493  INFO 16028 --- [restartedMain] com.nguyenduc.ProductApplication         : No active profile set, falling back to default profiles: default
-2021-11-01 23:52:14.650  INFO 16028 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-11-01 23:52:14.650  INFO 16028 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2021-11-01 23:52:16.770  INFO 16028 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-11-01 23:52:17.053  INFO 16028 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 236 ms. Found 3 JPA repository interfaces.
-2021-11-01 23:52:18.162  INFO 16028 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-11-01 23:52:18.178  INFO 16028 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-11-01 23:52:18.179  INFO 16028 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
-2021-11-01 23:52:18.342  INFO 16028 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-11-01 23:52:18.343  INFO 16028 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3691 ms
-2021-11-01 23:52:18.622  INFO 16028 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-11-01 23:52:19.445  INFO 16028 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-11-01 23:52:19.519  INFO 16028 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-11-01 23:52:19.619  INFO 16028 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
-2021-11-01 23:52:19.905  INFO 16028 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-11-01 23:52:20.104  INFO 16028 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2021-11-01 23:52:21.770 DEBUG 16028 --- [restartedMain] org.hibernate.SQL                        : 
+2021-11-02 08:12:41.147  INFO 3484 --- [restartedMain] com.nguyenduc.ProductApplication         : Starting ProductApplication using Java 1.8.0_201 on NguyenHuynhDuc with PID 3484 (D:\Codegym\Module-4\baitap\Spring-Boot\product-application\build\classes\java\main started by nguye in D:\Codegym\Module-4\baitap\Spring-Boot\product-application)
+2021-11-02 08:12:41.156  INFO 3484 --- [restartedMain] com.nguyenduc.ProductApplication         : No active profile set, falling back to default profiles: default
+2021-11-02 08:12:41.292  INFO 3484 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-11-02 08:12:41.294  INFO 3484 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-11-02 08:12:42.412  INFO 3484 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-02 08:12:42.523  INFO 3484 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 95 ms. Found 3 JPA repository interfaces.
+2021-11-02 08:12:43.467  INFO 3484 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-11-02 08:12:43.482  INFO 3484 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-02 08:12:43.482  INFO 3484 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+2021-11-02 08:12:43.621  INFO 3484 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-02 08:12:43.622  INFO 3484 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2326 ms
+2021-11-02 08:12:43.887  INFO 3484 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-02 08:12:44.681  INFO 3484 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-02 08:12:44.750  INFO 3484 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-02 08:12:44.842  INFO 3484 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-11-02 08:12:45.221  INFO 3484 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-11-02 08:12:45.410  INFO 3484 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-11-02 08:12:46.519 DEBUG 3484 --- [restartedMain] org.hibernate.SQL                        : 
     
     alter table image 
        add constraint FKgpextbyee3uk9u6o2381m7ft1 
        foreign key (product_id) 
        references product (id)
-2021-11-01 23:52:21.900 DEBUG 16028 --- [restartedMain] org.hibernate.SQL                        : 
+2021-11-02 08:12:46.602 DEBUG 3484 --- [restartedMain] org.hibernate.SQL                        : 
     
     alter table product 
        add constraint FK1mtsbur82frn64de7balymq9s 
        foreign key (category_id) 
        references category (id)
-2021-11-01 23:52:21.997  INFO 16028 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-11-01 23:52:22.020  INFO 16028 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-11-01 23:52:22.916  WARN 16028 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-11-01 23:52:23.558  INFO 16028 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-11-01 23:52:23.639  INFO 16028 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2021-11-01 23:52:23.666  INFO 16028 --- [restartedMain] com.nguyenduc.ProductApplication         : Started ProductApplication in 10.19 seconds (JVM running for 11.785)
-2021-11-01 23:52:27.862  INFO 16028 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-11-01 23:52:27.862  INFO 16028 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-11-01 23:52:27.866  INFO 16028 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
-2021-11-01 23:52:28.078 DEBUG 16028 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
-    insert 
-    into
-        product
-        (category_id, created_date, description, name, price) 
-    values
-        (?, ?, ?, ?, ?)
-2021-11-01 23:52:28.088 TRACE 16028 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [null]
-2021-11-01 23:52:28.089 TRACE 16028 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [TIMESTAMP] - [Mon Nov 01 23:52:28 ICT 2021]
-2021-11-01 23:52:28.092 TRACE 16028 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [New]
-2021-11-01 23:52:28.093 TRACE 16028 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [Iphone 11]
-2021-11-01 23:52:28.094 TRACE 16028 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [DOUBLE] - [1.5E7]
-2021-11-01 23:52:28.138 DEBUG 16028 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+2021-11-02 08:12:46.664  INFO 3484 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-02 08:12:46.684  INFO 3484 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-02 08:12:47.748  WARN 3484 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-02 08:12:48.419  INFO 3484 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-11-02 08:12:48.473  INFO 3484 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-11-02 08:12:48.487  INFO 3484 --- [restartedMain] com.nguyenduc.ProductApplication         : Started ProductApplication in 8.114 seconds (JVM running for 10.073)
+2021-11-02 08:43:18.965  INFO 3484 --- [Thread-22] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-02 08:43:18.982  INFO 3484 --- [Thread-22] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-11-02 08:43:19.061  INFO 3484 --- [Thread-22] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-11-02 08:44:03.348  INFO 3484 --- [restartedMain] com.nguyenduc.ProductApplication         : Starting ProductApplication using Java 1.8.0_201 on NguyenHuynhDuc with PID 3484 (D:\Codegym\Module-4\baitap\Spring-Boot\product-application\build\classes\java\main started by nguye in D:\Codegym\Module-4\baitap\Spring-Boot\product-application)
+2021-11-02 08:44:03.349  INFO 3484 --- [restartedMain] com.nguyenduc.ProductApplication         : No active profile set, falling back to default profiles: default
+2021-11-02 08:44:04.149  INFO 3484 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-02 08:44:04.194  INFO 3484 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 3 JPA repository interfaces.
+2021-11-02 08:44:04.491  INFO 3484 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-11-02 08:44:04.493  INFO 3484 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-02 08:44:04.494  INFO 3484 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+2021-11-02 08:44:04.544  INFO 3484 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-02 08:44:04.544  INFO 3484 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1179 ms
+2021-11-02 08:44:04.640  INFO 3484 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2021-11-02 08:44:04.680  INFO 3484 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2021-11-02 08:44:04.687  INFO 3484 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-02 08:44:04.698  INFO 3484 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-11-02 08:44:04.830 DEBUG 3484 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    alter table image 
+       add constraint FKgpextbyee3uk9u6o2381m7ft1 
+       foreign key (product_id) 
+       references product (id)
+2021-11-02 08:44:04.969 DEBUG 3484 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    alter table product 
+       add constraint FK1mtsbur82frn64de7balymq9s 
+       foreign key (category_id) 
+       references category (id)
+2021-11-02 08:44:05.087  INFO 3484 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-02 08:44:05.088  INFO 3484 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-02 08:44:05.366  WARN 3484 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-02 08:44:05.475  INFO 14792 --- [restartedMain] com.nguyenduc.ProductApplication         : Starting ProductApplication using Java 1.8.0_201 on NguyenHuynhDuc with PID 14792 (D:\Codegym\Module-4\baitap\Spring-Boot\product-application\build\classes\java\main started by nguye in D:\Codegym\Module-4\baitap\Spring-Boot\product-application)
+2021-11-02 08:44:05.482  INFO 14792 --- [restartedMain] com.nguyenduc.ProductApplication         : No active profile set, falling back to default profiles: default
+2021-11-02 08:44:05.679  INFO 14792 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-11-02 08:44:05.680  INFO 14792 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-11-02 08:44:05.807  INFO 3484 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-11-02 08:44:05.841  INFO 3484 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-11-02 08:44:05.856  INFO 3484 --- [restartedMain] com.nguyenduc.ProductApplication         : Started ProductApplication in 2.628 seconds (JVM running for 1887.441)
+2021-11-02 08:44:05.860  INFO 3484 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-11-02 08:44:06.989  INFO 14792 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-02 08:44:07.123  INFO 14792 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 116 ms. Found 3 JPA repository interfaces.
+2021-11-02 08:44:08.159  INFO 14792 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-11-02 08:44:08.179  INFO 14792 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-02 08:44:08.180  INFO 14792 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+2021-11-02 08:44:08.499  INFO 14792 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-02 08:44:08.500  INFO 14792 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2818 ms
+2021-11-02 08:44:08.878  INFO 14792 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-02 08:44:09.934  INFO 14792 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-02 08:44:10.067  INFO 14792 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-02 08:44:10.244  INFO 14792 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-11-02 08:44:10.780  INFO 14792 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-11-02 08:44:11.111  INFO 14792 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-11-02 08:44:12.365 DEBUG 14792 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    alter table image 
+       add constraint FKgpextbyee3uk9u6o2381m7ft1 
+       foreign key (product_id) 
+       references product (id)
+2021-11-02 08:44:12.446 DEBUG 14792 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    alter table product 
+       add constraint FK1mtsbur82frn64de7balymq9s 
+       foreign key (category_id) 
+       references category (id)
+2021-11-02 08:44:12.516  INFO 14792 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-02 08:44:12.540  INFO 14792 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-02 08:44:13.339  WARN 14792 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-02 08:44:14.162  WARN 14792 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2021-11-02 08:44:14.209  WARN 14792 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2021-11-02 08:44:14.214  INFO 14792 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-02 08:44:14.221  INFO 14792 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-11-02 08:44:14.238  INFO 14792 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-11-02 08:44:14.242  INFO 14792 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-11-02 08:44:14.264  INFO 14792 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-11-02 08:44:14.320 ERROR 14792 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2021-11-02 08:46:00.922  INFO 3484 --- [Thread-32] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-02 08:46:00.924  INFO 3484 --- [Thread-32] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2021-11-02 08:46:00.945  INFO 3484 --- [Thread-32] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2021-11-02 08:46:01.461  INFO 3484 --- [restartedMain] com.nguyenduc.ProductApplication         : Starting ProductApplication using Java 1.8.0_201 on NguyenHuynhDuc with PID 3484 (D:\Codegym\Module-4\baitap\Spring-Boot\product-application\build\classes\java\main started by nguye in D:\Codegym\Module-4\baitap\Spring-Boot\product-application)
+2021-11-02 08:46:01.461  INFO 3484 --- [restartedMain] com.nguyenduc.ProductApplication         : No active profile set, falling back to default profiles: default
+2021-11-02 08:46:01.951  INFO 3484 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-02 08:46:02.003  INFO 3484 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50 ms. Found 3 JPA repository interfaces.
+2021-11-02 08:46:02.294  INFO 3484 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-11-02 08:46:02.297  INFO 3484 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-02 08:46:02.298  INFO 3484 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+2021-11-02 08:46:02.344  INFO 3484 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-02 08:46:02.344  INFO 3484 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 878 ms
+2021-11-02 08:46:02.419  INFO 3484 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2021-11-02 08:46:02.451  INFO 3484 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2021-11-02 08:46:02.456  INFO 3484 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-02 08:46:02.466  INFO 3484 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-11-02 08:46:02.566 DEBUG 3484 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    alter table image 
+       add constraint FKgpextbyee3uk9u6o2381m7ft1 
+       foreign key (product_id) 
+       references product (id)
+2021-11-02 08:46:02.675 DEBUG 3484 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    alter table product 
+       add constraint FK1mtsbur82frn64de7balymq9s 
+       foreign key (category_id) 
+       references category (id)
+2021-11-02 08:46:02.854  INFO 3484 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-02 08:46:02.855  INFO 3484 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-02 08:46:03.077  WARN 3484 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-02 08:46:03.246  INFO 3484 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-11-02 08:46:03.263  INFO 3484 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-11-02 08:46:03.269  INFO 3484 --- [restartedMain] com.nguyenduc.ProductApplication         : Started ProductApplication in 1.888 seconds (JVM running for 2004.855)
+2021-11-02 08:46:03.272  INFO 3484 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-11-02 08:46:03.466  INFO 13440 --- [restartedMain] com.nguyenduc.ProductApplication         : Starting ProductApplication using Java 1.8.0_201 on NguyenHuynhDuc with PID 13440 (D:\Codegym\Module-4\baitap\Spring-Boot\product-application\build\classes\java\main started by nguye in D:\Codegym\Module-4\baitap\Spring-Boot\product-application)
+2021-11-02 08:46:03.468  INFO 13440 --- [restartedMain] com.nguyenduc.ProductApplication         : No active profile set, falling back to default profiles: default
+2021-11-02 08:46:03.559  INFO 13440 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-11-02 08:46:03.559  INFO 13440 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-11-02 08:46:04.620  INFO 13440 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-02 08:46:04.732  INFO 13440 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 96 ms. Found 3 JPA repository interfaces.
+2021-11-02 08:46:05.680  INFO 13440 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-11-02 08:46:05.695  INFO 13440 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-02 08:46:05.695  INFO 13440 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+2021-11-02 08:46:05.836  INFO 13440 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-02 08:46:05.836  INFO 13440 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2276 ms
+2021-11-02 08:46:06.090  INFO 13440 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-02 08:46:06.880  INFO 13440 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-02 08:46:06.951  INFO 13440 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-02 08:46:07.046  INFO 13440 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-11-02 08:46:07.364  INFO 13440 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-11-02 08:46:07.559  INFO 13440 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-11-02 08:46:08.663 DEBUG 13440 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    alter table image 
+       add constraint FKgpextbyee3uk9u6o2381m7ft1 
+       foreign key (product_id) 
+       references product (id)
+2021-11-02 08:46:08.746 DEBUG 13440 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    alter table product 
+       add constraint FK1mtsbur82frn64de7balymq9s 
+       foreign key (category_id) 
+       references category (id)
+2021-11-02 08:46:08.801  INFO 13440 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-02 08:46:08.819  INFO 13440 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-02 08:46:09.598  WARN 13440 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-02 08:46:10.110  WARN 13440 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2021-11-02 08:46:10.144  WARN 13440 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2021-11-02 08:46:10.147  INFO 13440 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-02 08:46:10.153  INFO 13440 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-11-02 08:46:10.168  INFO 13440 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-11-02 08:46:10.173  INFO 13440 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-11-02 08:46:10.198  INFO 13440 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-11-02 08:46:10.238 ERROR 13440 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2021-11-02 08:49:17.088  INFO 3484 --- [Thread-36] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-02 08:49:17.093  INFO 3484 --- [Thread-36] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2021-11-02 08:49:17.115  INFO 3484 --- [Thread-36] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2021-11-02 08:49:17.705  INFO 3484 --- [restartedMain] com.nguyenduc.ProductApplication         : Starting ProductApplication using Java 1.8.0_201 on NguyenHuynhDuc with PID 3484 (D:\Codegym\Module-4\baitap\Spring-Boot\product-application\build\classes\java\main started by nguye in D:\Codegym\Module-4\baitap\Spring-Boot\product-application)
+2021-11-02 08:49:17.705  INFO 3484 --- [restartedMain] com.nguyenduc.ProductApplication         : No active profile set, falling back to default profiles: default
+2021-11-02 08:49:18.917  INFO 3484 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-02 08:49:18.986  INFO 3484 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67 ms. Found 3 JPA repository interfaces.
+2021-11-02 08:49:19.596  INFO 3484 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-11-02 08:49:19.598  INFO 3484 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-02 08:49:19.600  INFO 3484 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+2021-11-02 08:49:19.743  INFO 3484 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-02 08:49:19.744  INFO 3484 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2030 ms
+2021-11-02 08:49:19.926  INFO 3484 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2021-11-02 08:49:19.972  INFO 3484 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2021-11-02 08:49:19.986  INFO 3484 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-02 08:49:19.997  INFO 3484 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-11-02 08:49:20.136 DEBUG 3484 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    alter table image 
+       add constraint FKgpextbyee3uk9u6o2381m7ft1 
+       foreign key (product_id) 
+       references product (id)
+2021-11-02 08:49:20.297 DEBUG 3484 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    alter table product 
+       add constraint FK1mtsbur82frn64de7balymq9s 
+       foreign key (category_id) 
+       references category (id)
+2021-11-02 08:49:20.419  INFO 3484 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-02 08:49:20.419  INFO 3484 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-02 08:49:20.831  WARN 3484 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-02 08:49:21.454  INFO 3484 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-11-02 08:49:21.476  INFO 3484 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-11-02 08:49:21.490  INFO 3484 --- [restartedMain] com.nguyenduc.ProductApplication         : Started ProductApplication in 3.959 seconds (JVM running for 2203.076)
+2021-11-02 08:49:21.495  INFO 3484 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-11-02 08:49:23.374  INFO 5352 --- [restartedMain] com.nguyenduc.ProductApplication         : Starting ProductApplication using Java 1.8.0_201 on NguyenHuynhDuc with PID 5352 (D:\Codegym\Module-4\baitap\Spring-Boot\product-application\build\classes\java\main started by nguye in D:\Codegym\Module-4\baitap\Spring-Boot\product-application)
+2021-11-02 08:49:23.376  INFO 5352 --- [restartedMain] com.nguyenduc.ProductApplication         : No active profile set, falling back to default profiles: default
+2021-11-02 08:49:23.515  INFO 5352 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-11-02 08:49:23.515  INFO 5352 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-11-02 08:49:24.776  INFO 5352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-02 08:49:24.911  INFO 5352 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 113 ms. Found 3 JPA repository interfaces.
+2021-11-02 08:49:26.017  INFO 5352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-11-02 08:49:26.031  INFO 5352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-02 08:49:26.032  INFO 5352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+2021-11-02 08:49:26.176  INFO 5352 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-02 08:49:26.176  INFO 5352 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2658 ms
+2021-11-02 08:49:26.468  INFO 5352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-02 08:49:27.342  INFO 5352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-02 08:49:27.411  INFO 5352 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-02 08:49:27.507  INFO 5352 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-11-02 08:49:27.807  INFO 5352 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-11-02 08:49:28.039  INFO 5352 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-11-02 08:49:29.148 DEBUG 5352 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    alter table image 
+       add constraint FKgpextbyee3uk9u6o2381m7ft1 
+       foreign key (product_id) 
+       references product (id)
+2021-11-02 08:49:29.228 DEBUG 5352 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    alter table product 
+       add constraint FK1mtsbur82frn64de7balymq9s 
+       foreign key (category_id) 
+       references category (id)
+2021-11-02 08:49:29.283  INFO 5352 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-02 08:49:29.300  INFO 5352 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-02 08:49:30.125  WARN 5352 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-02 08:49:30.691  WARN 5352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2021-11-02 08:49:30.731  WARN 5352 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2021-11-02 08:49:30.736  INFO 5352 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-02 08:49:30.745  INFO 5352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-11-02 08:49:30.761  INFO 5352 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-11-02 08:49:30.766  INFO 5352 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-11-02 08:49:30.785  INFO 5352 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-11-02 08:49:30.822 ERROR 5352 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2021-11-02 12:36:48.536  INFO 6756 --- [restartedMain] com.nguyenduc.ProductApplication         : Starting ProductApplication using Java 1.8.0_201 on NguyenHuynhDuc with PID 6756 (D:\Codegym\Module-4\baitap\Spring-Boot\product-application\build\classes\java\main started by nguye in D:\Codegym\Module-4\baitap\Spring-Boot\product-application)
+2021-11-02 12:36:48.539  INFO 6756 --- [restartedMain] com.nguyenduc.ProductApplication         : No active profile set, falling back to default profiles: default
+2021-11-02 12:36:48.823  INFO 6756 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-11-02 12:36:48.824  INFO 6756 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-11-02 12:36:51.382  INFO 6756 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-11-02 12:36:51.716  INFO 6756 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 282 ms. Found 3 JPA repository interfaces.
+2021-11-02 12:36:53.823  INFO 6756 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-11-02 12:36:53.852  INFO 6756 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-11-02 12:36:53.853  INFO 6756 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+2021-11-02 12:36:54.353  INFO 6756 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-11-02 12:36:54.354  INFO 6756 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5527 ms
+2021-11-02 12:36:54.965  INFO 6756 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-11-02 12:36:57.514  INFO 6756 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-11-02 12:36:57.638  INFO 6756 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-11-02 12:36:57.848  INFO 6756 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-11-02 12:36:58.328  INFO 6756 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-11-02 12:36:58.677  INFO 6756 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-11-02 12:37:03.911 DEBUG 6756 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    alter table image 
+       add constraint FKgpextbyee3uk9u6o2381m7ft1 
+       foreign key (product_id) 
+       references product (id)
+2021-11-02 12:37:04.092 DEBUG 6756 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    alter table product 
+       add constraint FK1mtsbur82frn64de7balymq9s 
+       foreign key (category_id) 
+       references category (id)
+2021-11-02 12:37:04.174  INFO 6756 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-11-02 12:37:04.210  INFO 6756 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-11-02 12:37:05.243  WARN 6756 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-11-02 12:37:05.887  INFO 6756 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-11-02 12:37:05.986  INFO 6756 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-11-02 12:37:06.010  INFO 6756 --- [restartedMain] com.nguyenduc.ProductApplication         : Started ProductApplication in 20.387 seconds (JVM running for 24.477)
+2021-11-02 12:37:16.711  INFO 6756 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-02 12:37:16.712  INFO 6756 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-11-02 12:37:16.715  INFO 6756 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2021-11-02 12:37:16.911 DEBUG 6756 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        product0_.id as id1_2_0_,
+        product0_.category_id as category6_2_0_,
+        product0_.created_date as created_2_2_0_,
+        product0_.description as descript3_2_0_,
+        product0_.name as name4_2_0_,
+        product0_.price as price5_2_0_,
+        category1_.id as id1_0_1_,
+        category1_.name as name2_0_1_ 
+    from
+        product product0_ 
+    left outer join
+        category category1_ 
+            on product0_.category_id=category1_.id 
+    where
+        product0_.id=?
+2021-11-02 12:37:16.924 TRACE 6756 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2021-11-02 12:37:17.053 DEBUG 6756 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    delete 
+    from
+        product 
+    where
+        id=?
+2021-11-02 12:37:17.054 TRACE 6756 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2021-11-02 12:37:49.452  WARN 6756 --- [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2021-11-02 12:37:56.295 DEBUG 6756 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        product0_.id as id1_2_0_,
+        product0_.category_id as category6_2_0_,
+        product0_.created_date as created_2_2_0_,
+        product0_.description as descript3_2_0_,
+        product0_.name as name4_2_0_,
+        product0_.price as price5_2_0_,
+        category1_.id as id1_0_1_,
+        category1_.name as name2_0_1_ 
+    from
+        product product0_ 
+    left outer join
+        category category1_ 
+            on product0_.category_id=category1_.id 
+    where
+        product0_.id=?
+2021-11-02 12:37:56.295 TRACE 6756 --- [http-nio-8080-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [2]
+2021-11-02 12:37:56.330 DEBUG 6756 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : 
     insert 
     into
         image
         (name, product_id) 
     values
         (?, ?)
-2021-11-01 23:52:28.139 TRACE 16028 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [samsung.jpg]
-2021-11-01 23:52:28.139 TRACE 16028 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [12]
-2021-11-01 23:52:28.151 DEBUG 16028 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+2021-11-02 12:37:56.332 TRACE 6756 --- [http-nio-8080-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [samsung.jpg]
+2021-11-02 12:37:56.332 TRACE 6756 --- [http-nio-8080-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [2]
+2021-11-02 12:37:56.346 DEBUG 6756 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    update
+        product 
+    set
+        category_id=?,
+        created_date=?,
+        description=?,
+        name=?,
+        price=? 
+    where
+        id=?
+2021-11-02 12:37:56.347 TRACE 6756 --- [http-nio-8080-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [null]
+2021-11-02 12:37:56.349 TRACE 6756 --- [http-nio-8080-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [TIMESTAMP] - [2021-11-01 23:32:05.0]
+2021-11-02 12:37:56.354 TRACE 6756 --- [http-nio-8080-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [New]
+2021-11-02 12:37:56.354 TRACE 6756 --- [http-nio-8080-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [Iphone 11]
+2021-11-02 12:37:56.356 TRACE 6756 --- [http-nio-8080-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [DOUBLE] - [1.5E7]
+2021-11-02 12:37:56.357 TRACE 6756 --- [http-nio-8080-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [BIGINT] - [2]
+2021-11-02 12:37:56.369 DEBUG 6756 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : 
     insert 
     into
         image
         (name, product_id) 
     values
         (?, ?)
-2021-11-01 23:52:28.151 TRACE 16028 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [co.png]
-2021-11-01 23:52:28.151 TRACE 16028 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [12]
+2021-11-02 12:37:56.370 TRACE 6756 --- [http-nio-8080-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [co.png]
+2021-11-02 12:37:56.370 TRACE 6756 --- [http-nio-8080-exec-4] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [2]
+2021-11-02 12:44:40.442 DEBUG 6756 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        category0_.id as id1_0_0_,
+        category0_.name as name2_0_0_ 
+    from
+        category category0_ 
+    where
+        category0_.id=?
+2021-11-02 12:44:40.443 TRACE 6756 --- [http-nio-8080-exec-7] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2021-11-02 12:44:40.449 DEBUG 6756 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        product0_.id as id1_2_0_,
+        product0_.category_id as category6_2_0_,
+        product0_.created_date as created_2_2_0_,
+        product0_.description as descript3_2_0_,
+        product0_.name as name4_2_0_,
+        product0_.price as price5_2_0_,
+        category1_.id as id1_0_1_,
+        category1_.name as name2_0_1_ 
+    from
+        product product0_ 
+    left outer join
+        category category1_ 
+            on product0_.category_id=category1_.id 
+    where
+        product0_.id=?
+2021-11-02 12:44:40.449 TRACE 6756 --- [http-nio-8080-exec-7] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [2]
+2021-11-02 12:44:40.459 DEBUG 6756 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    insert 
+    into
+        image
+        (name, product_id) 
+    values
+        (?, ?)
+2021-11-02 12:44:40.460 TRACE 6756 --- [http-nio-8080-exec-7] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [samsung.jpg]
+2021-11-02 12:44:40.460 TRACE 6756 --- [http-nio-8080-exec-7] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [2]
+2021-11-02 12:44:40.464 DEBUG 6756 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    update
+        product 
+    set
+        category_id=?,
+        created_date=?,
+        description=?,
+        name=?,
+        price=? 
+    where
+        id=?
+2021-11-02 12:44:40.465 TRACE 6756 --- [http-nio-8080-exec-7] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2021-11-02 12:44:40.465 TRACE 6756 --- [http-nio-8080-exec-7] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [TIMESTAMP] - [2021-11-01 23:32:05.0]
+2021-11-02 12:44:40.466 TRACE 6756 --- [http-nio-8080-exec-7] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [New]
+2021-11-02 12:44:40.466 TRACE 6756 --- [http-nio-8080-exec-7] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [Iphone 11]
+2021-11-02 12:44:40.466 TRACE 6756 --- [http-nio-8080-exec-7] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [DOUBLE] - [1.5E7]
+2021-11-02 12:44:40.466 TRACE 6756 --- [http-nio-8080-exec-7] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [BIGINT] - [2]
+2021-11-02 12:44:40.474 DEBUG 6756 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    insert 
+    into
+        image
+        (name, product_id) 
+    values
+        (?, ?)
+2021-11-02 12:44:40.474 TRACE 6756 --- [http-nio-8080-exec-7] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [co.png]
+2021-11-02 12:44:40.475 TRACE 6756 --- [http-nio-8080-exec-7] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [2]
+2021-11-02 12:44:50.384 DEBUG 6756 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        category0_.id as id1_0_0_,
+        category0_.name as name2_0_0_ 
+    from
+        category category0_ 
+    where
+        category0_.id=?
+2021-11-02 12:44:50.385 TRACE 6756 --- [http-nio-8080-exec-8] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2021-11-02 12:44:50.392 DEBUG 6756 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        product0_.id as id1_2_0_,
+        product0_.category_id as category6_2_0_,
+        product0_.created_date as created_2_2_0_,
+        product0_.description as descript3_2_0_,
+        product0_.name as name4_2_0_,
+        product0_.price as price5_2_0_,
+        category1_.id as id1_0_1_,
+        category1_.name as name2_0_1_ 
+    from
+        product product0_ 
+    left outer join
+        category category1_ 
+            on product0_.category_id=category1_.id 
+    where
+        product0_.id=?
+2021-11-02 12:44:50.392 TRACE 6756 --- [http-nio-8080-exec-8] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [3]
+2021-11-02 12:44:50.401 DEBUG 6756 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    insert 
+    into
+        image
+        (name, product_id) 
+    values
+        (?, ?)
+2021-11-02 12:44:50.402 TRACE 6756 --- [http-nio-8080-exec-8] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [samsung.jpg]
+2021-11-02 12:44:50.402 TRACE 6756 --- [http-nio-8080-exec-8] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [3]
+2021-11-02 12:44:50.409 DEBUG 6756 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    update
+        product 
+    set
+        category_id=?,
+        created_date=?,
+        description=?,
+        name=?,
+        price=? 
+    where
+        id=?
+2021-11-02 12:44:50.410 TRACE 6756 --- [http-nio-8080-exec-8] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2021-11-02 12:44:50.410 TRACE 6756 --- [http-nio-8080-exec-8] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [TIMESTAMP] - [2021-11-01 23:34:23.0]
+2021-11-02 12:44:50.411 TRACE 6756 --- [http-nio-8080-exec-8] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [New]
+2021-11-02 12:44:50.411 TRACE 6756 --- [http-nio-8080-exec-8] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [Iphone 11]
+2021-11-02 12:44:50.411 TRACE 6756 --- [http-nio-8080-exec-8] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [DOUBLE] - [1.5E7]
+2021-11-02 12:44:50.411 TRACE 6756 --- [http-nio-8080-exec-8] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [BIGINT] - [3]
+2021-11-02 12:44:50.421 DEBUG 6756 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    insert 
+    into
+        image
+        (name, product_id) 
+    values
+        (?, ?)
+2021-11-02 12:44:50.421 TRACE 6756 --- [http-nio-8080-exec-8] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [co.png]
+2021-11-02 12:44:50.423 TRACE 6756 --- [http-nio-8080-exec-8] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [3]
+2021-11-02 12:44:53.759 DEBUG 6756 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : 
+    select
+        category0_.id as id1_0_0_,
+        category0_.name as name2_0_0_ 
+    from
+        category category0_ 
+    where
+        category0_.id=?
+2021-11-02 12:44:53.760 TRACE 6756 --- [http-nio-8080-exec-9] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2021-11-02 12:44:53.766 DEBUG 6756 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : 
+    select
+        product0_.id as id1_2_0_,
+        product0_.category_id as category6_2_0_,
+        product0_.created_date as created_2_2_0_,
+        product0_.description as descript3_2_0_,
+        product0_.name as name4_2_0_,
+        product0_.price as price5_2_0_,
+        category1_.id as id1_0_1_,
+        category1_.name as name2_0_1_ 
+    from
+        product product0_ 
+    left outer join
+        category category1_ 
+            on product0_.category_id=category1_.id 
+    where
+        product0_.id=?
+2021-11-02 12:44:53.767 TRACE 6756 --- [http-nio-8080-exec-9] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [4]
+2021-11-02 12:44:53.776 DEBUG 6756 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : 
+    insert 
+    into
+        image
+        (name, product_id) 
+    values
+        (?, ?)
+2021-11-02 12:44:53.777 TRACE 6756 --- [http-nio-8080-exec-9] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [samsung.jpg]
+2021-11-02 12:44:53.777 TRACE 6756 --- [http-nio-8080-exec-9] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [4]
+2021-11-02 12:44:53.783 DEBUG 6756 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : 
+    update
+        product 
+    set
+        category_id=?,
+        created_date=?,
+        description=?,
+        name=?,
+        price=? 
+    where
+        id=?
+2021-11-02 12:44:53.784 TRACE 6756 --- [http-nio-8080-exec-9] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2021-11-02 12:44:53.784 TRACE 6756 --- [http-nio-8080-exec-9] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [TIMESTAMP] - [2021-11-01 23:36:02.0]
+2021-11-02 12:44:53.785 TRACE 6756 --- [http-nio-8080-exec-9] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [New]
+2021-11-02 12:44:53.785 TRACE 6756 --- [http-nio-8080-exec-9] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [Iphone 11]
+2021-11-02 12:44:53.785 TRACE 6756 --- [http-nio-8080-exec-9] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [DOUBLE] - [1.5E7]
+2021-11-02 12:44:53.785 TRACE 6756 --- [http-nio-8080-exec-9] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [BIGINT] - [4]
+2021-11-02 12:44:53.794 DEBUG 6756 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : 
+    insert 
+    into
+        image
+        (name, product_id) 
+    values
+        (?, ?)
+2021-11-02 12:44:53.795 TRACE 6756 --- [http-nio-8080-exec-9] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [co.png]
+2021-11-02 12:44:53.795 TRACE 6756 --- [http-nio-8080-exec-9] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [4]
+2021-11-02 12:44:56.923 DEBUG 6756 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        category0_.id as id1_0_0_,
+        category0_.name as name2_0_0_ 
+    from
+        category category0_ 
+    where
+        category0_.id=?
+2021-11-02 12:44:56.923 TRACE 6756 --- [http-nio-8080-exec-10] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2021-11-02 12:44:56.930 DEBUG 6756 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        product0_.id as id1_2_0_,
+        product0_.category_id as category6_2_0_,
+        product0_.created_date as created_2_2_0_,
+        product0_.description as descript3_2_0_,
+        product0_.name as name4_2_0_,
+        product0_.price as price5_2_0_,
+        category1_.id as id1_0_1_,
+        category1_.name as name2_0_1_ 
+    from
+        product product0_ 
+    left outer join
+        category category1_ 
+            on product0_.category_id=category1_.id 
+    where
+        product0_.id=?
+2021-11-02 12:44:56.931 TRACE 6756 --- [http-nio-8080-exec-10] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [5]
+2021-11-02 12:44:56.941 DEBUG 6756 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : 
+    insert 
+    into
+        image
+        (name, product_id) 
+    values
+        (?, ?)
+2021-11-02 12:44:56.942 TRACE 6756 --- [http-nio-8080-exec-10] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [samsung.jpg]
+2021-11-02 12:44:56.942 TRACE 6756 --- [http-nio-8080-exec-10] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [5]
+2021-11-02 12:44:56.946 DEBUG 6756 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : 
+    update
+        product 
+    set
+        category_id=?,
+        created_date=?,
+        description=?,
+        name=?,
+        price=? 
+    where
+        id=?
+2021-11-02 12:44:56.947 TRACE 6756 --- [http-nio-8080-exec-10] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2021-11-02 12:44:56.947 TRACE 6756 --- [http-nio-8080-exec-10] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [TIMESTAMP] - [2021-11-01 23:36:11.0]
+2021-11-02 12:44:56.948 TRACE 6756 --- [http-nio-8080-exec-10] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [New]
+2021-11-02 12:44:56.948 TRACE 6756 --- [http-nio-8080-exec-10] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [Iphone 11]
+2021-11-02 12:44:56.948 TRACE 6756 --- [http-nio-8080-exec-10] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [DOUBLE] - [1.5E7]
+2021-11-02 12:44:56.948 TRACE 6756 --- [http-nio-8080-exec-10] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [BIGINT] - [5]
+2021-11-02 12:44:56.956 DEBUG 6756 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : 
+    insert 
+    into
+        image
+        (name, product_id) 
+    values
+        (?, ?)
+2021-11-02 12:44:56.956 TRACE 6756 --- [http-nio-8080-exec-10] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [co.png]
+2021-11-02 12:44:56.957 TRACE 6756 --- [http-nio-8080-exec-10] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [5]
+2021-11-02 12:46:00.180 DEBUG 6756 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        product0_.id as id1_2_,
+        product0_.category_id as category6_2_,
+        product0_.created_date as created_2_2_,
+        product0_.description as descript3_2_,
+        product0_.name as name4_2_,
+        product0_.price as price5_2_ 
+    from
+        product product0_
+2021-11-02 12:46:00.187 DEBUG 6756 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        category0_.id as id1_0_0_,
+        category0_.name as name2_0_0_ 
+    from
+        category category0_ 
+    where
+        category0_.id=?
+2021-11-02 12:46:00.187 TRACE 6756 --- [http-nio-8080-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2021-11-02 14:03:05.488  INFO 6756 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-11-02 14:03:05.503  INFO 6756 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-11-02 14:03:05.503  INFO 6756 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
